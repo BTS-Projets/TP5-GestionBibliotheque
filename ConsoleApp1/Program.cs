@@ -5,15 +5,15 @@ static void Main(string[] args)
     try
     {
         Bibliotheque bibli = new Bibliotheque();
-        // Ajouter d'adhérents à la bibliothéque dans la collection d'adhérents 
+        // Ajouter des adhérents à la bibliothéque dans la collection d'adhérents 
         Adherent ad = new Adherent("Jean", "Dupond");
         bibli.AjouterAdherent(ad);
         Adherent ad2 = new Adherent("Marie", "Dubois");
         bibli.AjouterAdherent(ad2);
-        // Créer de deux livres que l'on conservent dans des variables
+        // Créer deux livres qui vont être conservés dans des variables
         Livre livre1 = new Livre("Misérables", "Hugo V.");
         Livre livre2 = new Livre("Systèmes multi-agents", "Ferber J.");
-        // Ajouter de documents dans la collection de bibliothéque
+        // Ajouter des documents dans la collection de bibliothéque
         bibli.AjouterDocument(livre1);
         bibli.AjouterDocument(livre2);
         bibli.AjouterDocument(new Journal("Dr Dobbs", Convert.ToDateTime("12/05/2017")));
