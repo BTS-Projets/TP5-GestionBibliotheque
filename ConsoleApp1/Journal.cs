@@ -12,5 +12,5 @@ public class Journal : Document
         DateParution = dateParution;
     }
 
-    public override string ToString() => $"{base.ToString()}, Date de parution : {DateParution}";
+    public override string ToString() => $"{base.ToString()}\nDate :{DateParution}";
 }

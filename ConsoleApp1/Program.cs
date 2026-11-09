@@ -21,13 +21,25 @@ public class Program
             bibli.AjouterDocument(new Journal("Dr Dobbs", Convert.ToDateTime("12/05/2017")));
             bibli.AjouterDocument(new BD("Thorgal: La galère noire", "Van Hamme", "Rosinsky"));
             bibli.AjouterDocument(new Dictionnaire("Petit Robert", "Robert !."));
-            // ad.EmprunterLivre(livre1);
             // Afficher la liste des documents de la blibliothèque
             Console.WriteLine("------ Liste des documents ------");
             foreach (Document d in bibli.LesDocuments)
             {
-                Console.WriteLine("\n"+d);
+                Console.WriteLine(d);
+                Console.WriteLine();
             }
+
+            ad.emprunter(livre1);
+            ad.emprunter(livre2);
+
+            Console.WriteLine("------ 2/ Afficher les livres empruntés par l'adhérent ------");
+            foreach (Livre livre in ad.LesLivres)
+            {
+                Console.WriteLine(livre);
+                Console.WriteLine();
+            }
+
+            ad.rendre(livre1);
             Console.ReadKey();
 
         }

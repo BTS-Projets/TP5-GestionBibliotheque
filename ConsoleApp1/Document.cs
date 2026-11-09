@@ -7,5 +7,5 @@ public class Document
         Titre = titre;
     }
 
-    public override string ToString() => $"Titre : {Titre}";
+    public override string ToString() => $"titre : {Titre}";
 }

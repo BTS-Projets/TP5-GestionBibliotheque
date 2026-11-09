@@ -7,5 +7,5 @@ public class Volume : Document
         Auteur = auteur;
     }
 
-    public override string ToString() => $"{base.ToString()}, Auteur : {Auteur}";
+    public override string ToString() => $"{base.ToString()}\nAuteur : {Auteur}";
 }

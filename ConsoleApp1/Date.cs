@@ -7,5 +7,5 @@ public class Date
         Valeur = valeur.Date;
     }
 
-    public override string ToString() => Valeur.ToString("dd/MM/yyyy");
+    public override string ToString() => Valeur.ToString("d/M/yyyy");
 }
