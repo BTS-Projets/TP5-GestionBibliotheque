@@ -13,6 +13,8 @@ public class Bibliotheque
         LesDocuments.Add(document);
     }
 
-    public override string ToString() =>
-        $"Documents : {string.Join(", ", LesDocuments)}; Adhérents : {string.Join(", ", LesAdherents)}";
+    public override string ToString()
+    {
+        return "Documents : " + string.Join(", ", LesDocuments) + "; Adhérents : " + string.Join(", ", LesAdherents);
+    }
 }

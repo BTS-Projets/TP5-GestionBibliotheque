@@ -12,25 +12,32 @@ public class Adherent
 
     public void emprunter(Livre l)
     {
-        if (l.Emprunte)
+        if (l.Emprunte == false)
         {
-            throw new InvalidOperationException("Ce livre est déjà emprunté.");
+            l.Emprunte = true;
+            LesLivres.Add(l);
         }
-
-        l.Emprunte = true;
-        LesLivres.Add(l);
+        else
+        {
+            Console.WriteLine("Ce livre est déjà emprunté.");
+        }
     }
 
     public void rendre(Livre l)
     {
-        if (!LesLivres.Remove(l))
+        if (LesLivres.Contains(l))
         {
-            throw new InvalidOperationException("Cet adhérent n'a pas emprunté ce livre.");
+            LesLivres.Remove(l);
+            l.Emprunte = false;
         }
-
-        l.Emprunte = false;
+        else
+        {
+            Console.WriteLine("Cet adhérent n'a pas emprunté ce livre.");
+        }
     }
 
-    public override string ToString() =>
-        $"Nom : {Nom}, Prénom : {Prenom}, Livres : {string.Join(", ", LesLivres)}";
+    public override string ToString()
+    {
+        return "Nom : " + Nom + ", Prénom : " + Prenom + ", Livres : " + string.Join(", ", LesLivres);
+    }
 }

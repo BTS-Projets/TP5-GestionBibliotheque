@@ -6,5 +6,8 @@ public class Livre : Volume
     {
     }
 
-    public override string ToString() => $"{base.ToString()}\nemprunté : {Emprunte}";
+    public override string ToString()
+    {
+        return base.ToString() + "\nemprunté : " + Emprunte;
+    }
 }

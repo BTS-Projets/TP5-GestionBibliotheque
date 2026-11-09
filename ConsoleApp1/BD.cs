@@ -7,5 +7,8 @@ public class BD : Volume
         Dessinateur = dessinateur;
     }
 
-    public override string ToString() => $"{base.ToString()}\nDessinateur : {Dessinateur}";
+    public override string ToString()
+    {
+        return base.ToString() + "\nDessinateur : " + Dessinateur;
+    }
 }
