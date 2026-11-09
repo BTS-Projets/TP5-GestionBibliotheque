@@ -18,7 +18,7 @@ public class Program
             // Ajouter des documents dans la collection de la bibliothèque
             bibli.AjouterDocument(livre1);
             bibli.AjouterDocument(livre2);
-            bibli.AjouterDocument(new Journal("Dr Dobbs", Convert.ToDateTime("12/05/2017")));
+            bibli.AjouterDocument(new Journal("Dr Dobbs", new DateTime(2017, 5, 12)));
             bibli.AjouterDocument(new BD("Thorgal: La galère noire", "Van Hamme", "Rosinsky"));
             bibli.AjouterDocument(new Dictionnaire("Petit Robert", "Robert !."));
             // Afficher la liste des documents de la blibliothèque

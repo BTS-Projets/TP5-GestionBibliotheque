@@ -18,3 +18,4 @@ public class Bibliotheque
         return "Documents : " + string.Join(", ", LesDocuments) + "; Adhérents : " + string.Join(", ", LesAdherents);
     }
 }
+

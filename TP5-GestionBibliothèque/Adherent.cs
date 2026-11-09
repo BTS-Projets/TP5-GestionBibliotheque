@@ -2,7 +2,7 @@ public class Adherent
 {
     public string Nom { get; }
     public string Prenom { get; }
-    public List<Livre> LesLivres { get; } = new();
+    public List<Livre> LesLivres { get; } = new List<Livre>();
 
     public Adherent(string nom, string prenom)
     {
